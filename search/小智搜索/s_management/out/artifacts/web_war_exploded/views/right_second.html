@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script rel="script" src="../js/right_t.js"></script>
+    <script src="../jquery-3.3.1.js"></script>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../css/right.css">
+    <style>
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 45%;
+            height: 45%;
+            padding: 20px;
+            background-color: #363636;
+            -webkit-border-radius: 0.4em;
+            -o-border-radius: 0.4em;
+            -moz-border-radius: 0.4em;
+            z-index:1002;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">
+    <!--<div class="switch_box box_1">-->
+              <!--<input type="checkbox" class="switch_1" name="checkbox1" value="1" id="no1" onclick="aaa()">停职-->
+    <!--</div>-->
+    <!--<div id="tingzhi" class="white_content">-->
+        <!--<p>您确定要开启“停职”？停职后该用户将不能使用该管理系统！</p>-->
+        <!--<a href = "javascript:void(0)" onclick = "tijiao()">确定</a>-->
+        <!--<a href = "javascript:void(0)" onclick = "ccc()">退出</a>-->
+    <!--</div>-->
+    <div class="switch_box box_1">
+        <input type="checkbox" class="switch_1" name="checkbox1" value="0" id="no2" onclick="aaa()">离职
+    </div>
+    <div id="lizhi" class="white_content">
+        <p>您确定要开启“离职”？离职后该管理员将被永久删除！</p>
+        <a href = "javascript:void(0)" onclick = "tijiao()">确定</a>
+        <a href = "javascript:void(0)" onclick = "ccc()">退出</a>
+    </div>
+</div>
+
+<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;" id="part_two">
+    <table width="99%" border="0" align="center" style="border-bottom:1px solid #cccccc">
+          <tr><td width="10"><select name="areaid" id="department" onChange="setTown('department','system')">
+                        <option value="none">请选择部门</option>
+                        <option value="ysgj">运输工具</option>
+                        <option value="cdsb">舱单申报</option>
+                        <option value="hwsb">货物申报</option>
+                        <option value="sfzf">税费支付</option>
+                        <option value="qtyw">其他业务</option>
+                        <option value="kjds">跨境电商</option>
+                    </select></td><br>
+                    <td  width="10"><select name="system" id="system">
+                            <option value="none">请选择系统</option>
+                        </select>
+                        </td>
+                </tr>
+        </table>
+    <div class="checkbox">
+              <label><input type="checkbox" name="checkbox" value="0" onclick="this.value=(this.value==0)?1:0">数据录入权限</label>
+        </div>
+    <div class="checkbox">
+              <label><input type="checkbox" name="checkbox" value="0" onclick="this.value=(this.value==0)?1:0">客户回执权限</label>
+        </div>
+    <div class="checkbox">
+              <label><input type="checkbox" name="checkbox" value="0" onclick="this.value=(this.value==0)?1:0">查看反馈权限</label>
+        </div>
+    <button class="white-mode" data-method="notice" onclick="tijiao()">提交</button>
+</div>
+</body>
+<script type="text/javascript">
+
+
+</script>
+</html>

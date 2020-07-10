@@ -1,0 +1,158 @@
+create database glmd;
+use glmd;
+
+/*
+超级管理员
+*/
+create table super_management(
+userID varchar(18) not null,  //帐号（用工号代替）
+userName varchar(18) not null,  //姓名
+nickName varchar(18) not null,  //昵称
+passWord varchar(18) not null,  //密码
+primary key(userID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+/*
+普通管理员
+*/
+//超级管理员获取普通管理员信息表
+create table common_management(
+userID varchar(18) not null,  //帐号（用工号代替）
+userName varchar(18) not null,  //姓名
+nickName varchar(18) not null,  //昵称
+passWord varchar(18) not null,  //密码
+primary key(userID),
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+//普通管理员登录数据表
+create table clogin_management(
+userID varchar(18) not null,
+passWord varchar(18) not null,
+primary key(userID),
+foreign key(userID) references common_management(userID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+//管理员和权限对应表
+create table name_single_right(
+userID  varchar(18)  primary key not null,   //工号
+userName   varchar(18)   not null,   //普通员工姓名
+department  varchar(18) ,   //管理部门
+system   varchar(18) ,   //管理系统
+dataInsert     int ,   //数据录入
+huizhi         int ,   //客户回执
+fankui         int ,   //客户反馈查看
+workStatus     int ,   //是否在职   0 离职  1 在职
+ifDistribution int ,   //是否已分配    0 未分配  1 已分配
+foreign key(userID) references common_management(userID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+create table name_single_right(
+userID  varchar(18)  primary key not null,
+userName   varchar(18)   not null,
+department  varchar(18) ,
+system   varchar(18) ,
+dataInsert     int ,
+huizhi         int ,
+fankui         int ,
+workStatus     int ,
+ifDistribution int ,
+foreign key(userID) references common_management(userID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+
+
+//权限和权限ID对应表
+create table right_connection(
+right_ID int auto_increment primary key,    //权限ID
+right_Name varchar(18) not null    //权限名
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+//权限组和权限对应表
+create table single_group_right(
+right_group_ID int auto_increment primary key,   //权限组ID
+dataInsert     int  not null,   //数据录入
+huizhi         int  not null,   //客户回执
+fankui         int  not null,   //客户反馈查看
+record         int  not null,   //客户聊天记录查看
+customService  int  not null,   //人工客服
+workStatus     int  not null,   //是否在职   1 在职   0 离职
+ifDistribution int  not null   //是否已分配  1 已分配   0 未分配
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+/*
+权限表:(1)单个选择;(2)组选择
+*/
+//userID和权限表
+create table name_single_right(
+userID  varchar(18)   primary key not null,   //工号
+userName   varchar(18)   not null,   //普通员工姓名
+department  varchar(18)   not null,   //管理部门
+system   varchar(18)   not null,   //管理系统
+right_ID1  int not null,  //单个权限
+right_group_ID1 int,   //权限组
+foreign key(right_ID1) references right_connection(right_ID),
+foreign key(right_group_ID1) references single_group_right(right_group_ID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+/**
+*数据插入
+*/
+//将权限插入权限表中
+insert into right_connection(right_Name)
+values('dataInsert'),('huizhi'),('fankui'),('record'),('customService'),('workStatus'),('ifDistribution');
+
+
+
+
+
+
+
+
+
+
+
+/*
+dataInsert     int  not null,   //数据录入
+huizhi         int  not null,   //客户回执
+fankui         int  not null,   //客户反馈查看
+record         int  not null,   //客户聊天记录查看
+customService  int  not null,   //人工客服
+workStatus     int  not null,   //是否在职   1 在职   0 离职
+ifDistribution int  not null,   //是否已分配  1 已分配   0 未分配
+*/
+
+
+
+
+
+
+
+
+
+

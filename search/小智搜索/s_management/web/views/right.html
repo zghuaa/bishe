@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../assets/layui.css"  media="all">
+    <link rel="stylesheet" href="../css/cannotcopy.css">
+    <link rel="stylesheet" href="../css/right.css">
+    <script src="../assets/layui.js"></script>
+    <script src="../jquery-3.3.1.js"></script>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../js/right_s.js"></script>
+    <script src="../js/right_t.js"></script>
+</head>
+<body>
+<!--已分配-->
+<div id="part_tab">
+    <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+         <legend>已分配</legend>
+    </fieldset>
+    <div  id="tabs" style="margin-top: 2%">
+        <a title="运输工具" id="ysgj" onclick="saveFirstVal(this.id)"><img src="../image/cds.png"></a>
+        <a  title="舱单申报" id="cdsb" onclick="saveFirstVal(this.id)"><img src="../image/mft.png"></a>
+        <a  title="货物申报" id="hwsb" onclick="saveFirstVal(this.id)"><img src="../image/dec.png"></a>
+        <a  title="税费支付" id="sfzf" onclick="saveFirstVal(this.id)"><img src="../image/spl.png"></a>
+        <a title="跨境电商" id="kjds" onclick="saveFirstVal(this.id)"><img src="../image/ceb.png"></a>
+        <a title="其他问题" id="qtwt" onclick="saveFirstVal(this.id)"><img src="../image/qsp.png"></a>
+    </div>
+</div>
+<!--已分配人员-->
+<div id="person_tab" style="margin-top: 2%;display: none">
+    <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+        <legend>已分配人员</legend>
+    </fieldset>
+    <div class="site-demo-button" style="margin-bottom: 0;">
+      <nav>
+         <ul class="main" id="main">
+           <!--<li><a class="a" onclick="c()"><img src="../image/a.png"></a>-->
+               <!--<ul class="drop menu4">-->
+                   <!--<li style="display: none" id="info">-->
+                       <!--<a>-->
+                         <!--<p>普通员工姓名</p>-->
+                         <!--<p>工号</p>-->
+                         <!--<p>管理部门</p>-->
+                         <!--<p>管理系统</p>-->
+                         <!--<p>数据录入</p>-->
+                         <!--<p>客户回执</p>-->
+                         <!--<p>客户反馈查看</p>-->
+                         <!--<p>客户聊天记录查看</p>-->
+                         <!--<p>人工客服</p>-->
+                         <!--<p><button class="white-mode"><a href="right_second.html">更改权限</a></button></p>-->
+                     <!--</a>-->
+                   <!--</li>-->
+               <!--</ul>-->
+           <!--</li>-->
+        </ul>
+          <div style="padding-top: 7%;padding-left: 90%">
+              <button class="layui-btn" onclick="b()">返回</button>
+          </div>
+      </nav>
+    </div>
+<script src="../assets/layui.js" charset="utf-8"></script>
+<script src="../js/right_s.js"></script>
+</div>
+
+<!--未分配-->
+<fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 5%;">
+    <legend>未分配人员</legend>
+</fieldset>
+
+<div id="person" style="margin-top: 2%">
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <welcome-file-list>
+        <welcome-file>/views/login.html</welcome-file>
+    </welcome-file-list>
+
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>InsertDataServlet</servlet-name>
+        <servlet-class>com.servlet.InsertDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertDataServlet</servlet-name>
+        <url-pattern>/InsertDataServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.servlet.IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/IndexServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>NSQServlet</servlet-name>
+        <servlet-class>com.servlet.NSQServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NSQServlet</servlet-name>
+        <url-pattern>/NSQServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>NHuiDaServlet</servlet-name>
+        <servlet-class>com.servlet.NHuiDaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NHuiDaServlet</servlet-name>
+        <url-pattern>/NHuiDaServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FanKuiServlet</servlet-name>
+        <servlet-class>com.servlet.FanKuiServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FanKuiServlet</servlet-name>
+        <url-pattern>/FanKuiServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+</web-app>

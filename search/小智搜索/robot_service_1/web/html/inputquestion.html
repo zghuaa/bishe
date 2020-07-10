@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Buttons 库的核心文件 -->
+    <link rel="stylesheet" href="../../web/css/button.css">
+    <!-- 当需要使用带下拉菜单的按钮时才需要加载下面的 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../web/js/button.js"></script>
+    <!-- 只有使用字体图标时才需要加载 Font-Awesome -->
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        .nav {width:500px; height:30px;}
+        .nav span{width:200px; height:30px; float:left}
+        .nav div{width:300px; height:30px; float:left}
+    </style>
+</head>
+<body>
+
+<form role="form" >
+<div class="form-group" style="padding: 2%">
+    <label id="email">邮箱&nbsp;&nbsp;</label>
+    <span class="glyphicon glyphicon-envelope" style="color: rgb(255,153,74);"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="userEmail" id="userEmail">
+    <br>
+    <label id="title" style="padding-top: 2%">问题标题</label>
+    <input type="text" id="Q_title" name="Q_title"  style="margin: 2%;align: center">
+    <textarea class="form-control" rows="5"  placeholder="请直接描述您的问题" id="des" style="padding-top: 2%"></textarea>
+
+</div>
+<div style="text-align: center">
+    <button class="button button-pill button-primary" type="button"  id="submit" >提交</button>
+</div>
+
+</form>
+
+
+<script type="text/javascript">
+
+    var firstType = localStorage.getItem("firstType");
+    var secondTitle = localStorage.getItem("secondTitle");
+    var thirdTitle = localStorage.getItem("thirdTitle");
+    var email = localStorage.getItem("userEmail");
+    console.log(firstType,secondTitle,thirdTitle,email);
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            $.ajax({
+                type:"post",
+                contentType:"application/x-www-form-urlencoded;charset=utf-8",
+                // url: "http://47.107.64.157:9999/addQuestion",
+                url: "http://localhost:9999/addQuestion",
+                data:"email="+email+"&indexName=question&type="+firstType+"&title="+$("#Q_title").val()+"&content="+$("#des").val(),
+                async:true,
+                success: function (data) {
+                    console.log(data);
+                    if(data==="0"){
+                        alert("提交成功！我们的管理人员会为您解答，过一段时间请登录您的邮箱。");
+                        // self.location = "http://47.107.64.157:9999/web/html/third.html"
+                        self.location = "../../web/html/third.html"
+                    } else{
+                        alert("提交失败！");
+                    }
+                }
+            })
+        });
+    })
+</script>
+</body>
+</html>

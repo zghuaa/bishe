@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link href="../../web/css/login.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../../web/css/cannotcopy.css">
+    <script src="../../web/js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../../web/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+<!--login-->
+<div class="main" id="login_div">
+    <div class="login-form">
+        <h1>欢迎来到小智客服</h1>
+        <!--<div class="head">-->
+            <!--<img src="../../web/images/user.png" alt=""/>-->
+        <!--</div>-->
+        <form>
+            <input id="email" type="email" class="login" placeholder="USERNAME" >
+            <input id="password" type="password" placeholder="Password">
+            <div>
+                <p style="text-align: left"><a href="#" onclick="register()">Register</a>
+                    <a href="#" style="padding-left: 40%">Forgot Password</a></p>
+            </div>
+            <div class="submit">
+                <input type="button" value="LOGIN" id="login-button">
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<!--register-->
+<div class="main" style="display: none" id="register_div">
+    <div class="login-form">
+        <h1>欢迎来到小智客服</h1>
+        <!--<div class="head">-->
+            <!--<img src="../../web/images/user.png" alt=""/>-->
+        <!--</div>-->
+        <form>
+            <input id="r_email" type="email" class="register" placeholder="USERNAME">
+            <input id="r_password" type="password" class="register" placeholder="Password">
+            <input id="r_r_password" type="password" class="register" placeholder="Repassword">
+            <div>
+                <p style="text-align: center"><a href="#" onclick="login()">To Login</a></p>
+            </div>
+            <div class="submit">
+                <input type="button" value="REGISTER" id="register-button">
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+<script src="../../web/js/register.js" type="text/javascript"></script>
+</html>

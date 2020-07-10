@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/cannotcopy.css">
+    <link rel="stylesheet" href="assets/css/layui.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>管理后台</title>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header custom-header">
+
+        <ul class="layui-nav layui-layout-left">
+
+            <li class="layui-nav-item slide-sidebar" lay-unselect>
+                <div class="layui-logo">超级管理员管理系统</div>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="image/a.png" class="layui-nav-img">
+                   超级管理员
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">个人中心</a></dd>
+                    <dd><a href="views/login.html">退出登录</a></dd>
+                </dl>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="layui-side custom-admin">
+        <div class="layui-side-scroll">
+            <ul id="Nav" class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">员工管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="views/guanli.html">账号管理</a></dd>
+                        <dd><a href="views/right.html">权限管理</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">客户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="views/fankui.html">客户反馈</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">报表管理</a>
+
+                    <dl class="layui-nav-child">
+                        <dd><a href="views/bar1.html">查看报表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">审批管理</a>
+
+                    <dl class="layui-nav-child">
+                        <dd><a href="/views/shenpi_fk.html">反馈审批</a></dd>
+                        <dd><a href="/views/shenpi_zl.html">资料审批</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">资料管理</a>
+
+                    <dl class="layui-nav-child">
+                        <dd><a href="views/nluru.html">资料批量录入</a></dd>
+                    </dl>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-tab app-container" lay-allowClose="true" lay-filter="tabs">
+            <ul id="appTabs" class="layui-tab-title custom-tab"></ul>
+            <div id="appTabPage" class="layui-tab-content"></div>
+        </div>
+    </div>
+    <div class="mobile-mask"></div>
+</div>
+<script src="assets/layui.js"></script>
+<script src="index.js" data-main="home"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反馈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../assets/layui.css"  media="all">
+    <link rel="stylesheet" href="../css/cannotcopy.css">
+    <script src="../jquery-3.3.1.js"></script>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<!--动态展示问题情况，已批未批状态-->
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>问题id</th>
+        <th>问题</th>
+        <th>答案</th>
+        <th>审批状态</th>
+    </tr>
+    </thead>
+    <tbody id="kehu">
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td><button class="layui-btn" id="status">未提交</button>
+        </td>
+    </tr>
+    <!--<tr>-->
+    <!--<td>a</td>-->
+    <!--<td>b</td>-->
+    <!--<td>c</td>-->
+    <!--<td><a href="#">已批</a></td>-->
+    <!--</tr>-->
+    </tbody>
+</table>
+
+<script src="../assets/layui.js" charset="utf-8"></script>
+</body>
+<script src="../js/kehu.js"></script>
+</html>

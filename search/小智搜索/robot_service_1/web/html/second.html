@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script rel="script" type="text/javascript" src="../../web/js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../web/css/bootstrap.min.css">
+    <script rel="script" type="text/javascript" src="../../web/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #F1E9DA;
+        }
+        body .container {
+            width: 850px;
+            margin: 70px auto 0px auto;
+            text-align: center;
+        }
+        body .container .button-effect {
+            padding: 30px 0px;
+        }
+        body .container .button-effect h2 {
+            font-family: 'Droid Serif', serif;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        body .container .button-effect a {
+            margin-right: 17px;
+        }
+        body .container .button-effect a:nth-child(1) {
+            background-color: #541388;
+        }
+        body .container .button-effect a:nth-child(2) {
+            background-color: #D90368;
+        }
+        body .container .button-effect a:nth-child(3) {
+            background-color: #104547;
+        }
+
+        body .container .button-effect a:nth-child(4) {
+            background-color: #0a6cf1;
+        }
+        body .container .button-effect a:last-child {
+            margin-right: 0px;
+        }
+
+        /* button styles !!!YOU NEED THEM
+        !!!ALSO YOU NEED TO ADD FONTWESOME */
+        .effect {
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            text-transform: capitalize;
+            font-family: 'Roboto', sans-serif;
+            /* put your font-family */
+            font-size: 18px;
+            padding: 20px 0px;
+            width: 150px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .effect.effect-4 {
+            -webkit-transition: all 0.2s linear 0s;
+            transition: all 0.2s linear 0s;
+        }
+        .effect.effect-4:before {
+            content: "\f178";
+            font-family: FontAwesome;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 30px;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+            -webkit-transition: all 0.2s linear 0s;
+            transition: all 0.2s linear 0s;
+        }
+        .effect.effect-4:hover {
+            text-indent: -9999px;
+        }
+        .effect.effect-4:hover:before {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            text-indent: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Choose one from following</h2>
+    <div class="button-effect"  id="sen_item">
+</div>
+</div>
+<script src="../../web/js/second.js"></script>
+</body>
+<body>
+<div class="container">
+    <h2>选择您要咨询的系统类别</h2>
+    <div class="button-effect" id="tabs">
+        <a  class="effect effect-4" title="Learn More"  id="船舶" onclick="saveFirstVal(this.id)">船舶</a>
+        <a  class="effect effect-4" title="Learn More"  id="航空器" onclick="saveFirstVal(this.id)">航空器</a><br>
+        <a  class="effect effect-4" title="Learn More"  id="公路" onclick="saveFirstVal(this.id)">公路</a>
+    </div>
+</div>
+</body>
+</html>

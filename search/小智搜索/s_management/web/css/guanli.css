@@ -1,0 +1,39 @@
+.file {
+    position: relative;
+    display: inline-block;
+    background: #15c739;
+    border: 1px solid #15c739;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #ffffff;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #15c739;
+    border-color: #15c739;
+    color: #000000;
+    text-decoration: none;
+}
+#des{
+    position: relative;
+    display: inline-block;
+    background: #00000000;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #000000;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-left: 85%;
+    margin-top: 1%
+}

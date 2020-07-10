@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/9小智搜索.iml" filepath="$PROJECT_DIR$/.idea/9小智搜索.iml" />
+      <module fileurl="file://$PROJECT_DIR$/小智搜索/robot_service_1/robot_service_1.iml" filepath="$PROJECT_DIR$/小智搜索/robot_service_1/robot_service_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/小智搜索/s_management/s_management.iml" filepath="$PROJECT_DIR$/小智搜索/s_management/s_management.iml" />
+    </modules>
+  </component>
+</project>

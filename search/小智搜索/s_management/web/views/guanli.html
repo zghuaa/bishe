@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="../css/cannotcopy.css">
+    <link rel="stylesheet" href="../css/guanli.css">
+
+</head>
+<body>
+
+<table class="layui-hide" id="test" lay-filter="test"></table>
+<form action="/UploadCsvHandleServlet" method="post" enctype="multipart/form-data" style="width: 100%">
+
+    <a href="javascript:;" class="file" style="margin-left: 85%;margin-top: 3%">选择文件
+        <input type="file" name="file" id="upCsv" accept=".csv" onchange="show()"/>
+
+    </a ><br>
+    <a href="javascript:;">
+    <input type="text" id="des" readonly="value"  />
+    </a>
+    <a href="javascript:;" class="file" style="margin-left: 85%;margin-top: 1%">上传文件
+        <input type="submit"  value="ok"/>
+    </a >
+</form>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script src="../js/guanli.js"></script>
+</body>
+<script>
+    function show(){
+        document.getElementById("des").value = document.getElementById("upCsv").value;
+    }
+</script>
+</html>

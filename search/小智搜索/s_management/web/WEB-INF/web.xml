@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <welcome-file-list>
+        <welcome-file>/views/login.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>uploadCsvHandleServlet</servlet-name>
+        <servlet-class>com.servlet.UploadCsvHandleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>uploadCsvHandleServlet</servlet-name>
+        <url-pattern>/UploadCsvHandleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommonInfoServlet</servlet-name>
+        <servlet-class>com.servlet.CommonInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CommonInfoServlet</servlet-name>
+        <url-pattern>/CommonInfoServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>RightServlet</servlet-name>
+        <servlet-class>com.servlet.RightServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RightServlet</servlet-name>
+        <url-pattern>/RightServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FenPeiServlet</servlet-name>
+        <servlet-class>com.servlet.FenPeiServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FenPeiServlet</servlet-name>
+        <url-pattern>/FenPeiServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetRightServlet</servlet-name>
+        <servlet-class>com.servlet.SetRightServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SetRightServlet</servlet-name>
+        <url-pattern>/SetRightServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.servlet.TestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadTxtHandleServlet</servlet-name>
+        <servlet-class>com.servlet.UploadTxtHandleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadTxtHandleServlet</servlet-name>
+        <url-pattern>/UploadTxtHandleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShenPiFkServlet</servlet-name>
+        <servlet-class>com.servlet.ShenPiFkServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShenPiFkServlet</servlet-name>
+        <url-pattern>/ShenPiFkServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ShenPiZlServlet</servlet-name>
+        <servlet-class>com.servlet.ShenPiZlServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShenPiZlServlet</servlet-name>
+        <url-pattern>/ShenPiZlServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SQServlet</servlet-name>
+        <servlet-class>com.servlet.SQServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SQServlet</servlet-name>
+        <url-pattern>/SQServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>InsertInfServlet</servlet-name>
+        <servlet-class>com.servlet.InsertInfServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertInfServlet</servlet-name>
+        <url-pattern>/InsertInfServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
